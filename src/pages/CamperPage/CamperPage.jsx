@@ -32,7 +32,7 @@ const CamperPage = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={buildLinkClass} to="reviews">
+          <NavLink className={buildLinkClass} to="reviews" > 
             Reviews
           </NavLink>
         </li>
