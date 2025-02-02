@@ -1,0 +1,36 @@
+.wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--gray);
+}
+
+.input {
+    padding: 18px 20px 18px 46px;
+    width: 360px;
+    height: 56px;
+    border: none;
+    outline: none;
+    color: var(--gray);
+    border-radius: 12px;
+    background: var(--inputs);
+}
+
+.input:focus,
+.input:valid {
+    color: var(--main);
+    background-color: var(--inputs);
+}
+
+.icon {
+    position: absolute;
+    top: 56%;
+    left: 18px;
+}

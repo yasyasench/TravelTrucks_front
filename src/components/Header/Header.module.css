@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    padding: 24px 64px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--inputs);
+    border-bottom: 1px solid var(--badges);
+}
+
+.logo {
+    margin-right: 450px;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--text);
+}
+
+.accent {
+    color: var(--main);
+}
+
+.list {
+    display: flex;
+    gap: 32px;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+}
+
+.link.active {
+    color: var(--button-hover);
+}
+
+li .link:hover {
+    color: var(--button-hover);
+}

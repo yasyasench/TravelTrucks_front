@@ -1,0 +1,45 @@
+.list {
+    margin-top: 56px;
+    max-width: 631px;
+}
+
+.item {
+    margin-bottom: 44px;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 60px;
+    height: 60px;
+    background: var(--badges);
+
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33333;
+    color: var(--button);
+}
+
+.nameContainer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+}
+
+.comment {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text);
+}
