@@ -31,7 +31,7 @@ const camperSlice = createSlice({
             .addCase(fetchCampers.pending, handlePending)
             .addCase(fetchCampers.fulfilled, (state, action) => {
                 if (state.currentPage === 1) state.items = [];
-                state.items = [...state.items, action.payload.items];
+                state.items = [...state.items, ...action.payload.items];
                 state.totalItems = action.payload.total;
                 state.isLoading = false;
             })

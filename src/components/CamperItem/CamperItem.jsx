@@ -36,7 +36,7 @@ const CamperItem = ({ camper }) => {
             </p>
             <button className={css.heartBtn} type="button">
               <svg width={26} height={24}>
-                <use href="/sprite.svg#icon-heart"></use>
+                <use href="/sprite.svg#icon-heart-Default"></use>
               </svg>
             </button>
           </div>
