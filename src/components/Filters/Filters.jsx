@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import css from "./Filters.module.css";
 import toast from "react-hot-toast";
 import SubmitBtn from "../Buttons/SubmitBtn";
@@ -23,6 +24,14 @@ const Filters = () => {
   const vehicleEquipment = useSelector(selectVehicleEquipment);
   const isError = useSelector(selectError);
 
+  useEffect(() => {
+    if (isError) {
+      toast.error("We didn’t find anything. Please try again.", {
+        position: "top-right",
+      });
+    }
+  }, [isError]); 
+
   const handleSearch = () => {
     dispatch(setPage(1));
     const filteredEquipment = Object.fromEntries(
@@ -40,11 +49,6 @@ const Filters = () => {
     };
     dispatch(fetchCampers(searchParams));
   };
-
-  if (isError)
-    toast.error("We didn’t find anything. Please try again.", {
-      position: "top-right",
-    });
 
   return (
     <aside className={css.filters}>

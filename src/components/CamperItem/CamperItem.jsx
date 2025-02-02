@@ -4,11 +4,23 @@ import css from "./CamperItem.module.css";
 import CategoriesList from "../CategoriesList/CategoriesList";
 
 const CamperItem = ({ camper }) => {
-  const { id, name, price, rating, location, description, gallery, reviews } = camper;
-  const countReviews = reviews?.length || 0; 
-  const img = gallery?.[0]?.thumb || "fallback-image-url.jpg"; 
-  const formattedPrice = `${price},00`;
-  const formattedDescr = description ? description.slice(0, 60) : "";
+ if (!camper) return null; // Ensure camper is defined before rendering
+
+  const {
+    id,
+    name,
+    price,
+    rating,
+    location,
+    description,
+    gallery = [],
+    reviews = [],
+  } = camper;
+
+  const countReviews = reviews.length || 0;
+  const img = gallery.length > 0 ? gallery[0].thumb : "fallback-image-url.jpg";
+  const formattedPrice = price ? `${price},00` : "N/A";
+  const formattedDescr = description ? description.slice(0, 60) : "No description available";
 
   return (
     <div className={css.box}>
@@ -39,7 +51,7 @@ const CamperItem = ({ camper }) => {
             </Link>
             <p>
               <svg className={css.icon} width={16} height={16}>
-                <use href="/sprite.svg#icon-map"></use>
+                <use href="/sprite-2.svg#icon-map"></use>
               </svg>
               {location}
             </p>

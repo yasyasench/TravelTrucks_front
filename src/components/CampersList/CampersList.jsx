@@ -13,12 +13,12 @@ const CampersList = () => {
   return (
     <div>
       <ul className={css.list}>
-        {campers.map((camper, index) => (
-          <li key={camper.id || `camper-${index}`} className={css.item}>
-            <CamperItem camper={camper} />
-          </li>
-        ))}
-      </ul>
+      {campers.map((camper) => (
+        <li key={camper.id} className={css.item}> 
+          <CamperItem camper={camper} />
+        </li>
+      ))}
+    </ul>
     </div>
   );
 };
